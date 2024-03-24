@@ -96,6 +96,11 @@
   padding: 0;
   height: 450px;
 }
+.activities .swiper {
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+}
 .activities .activities-container {
   width: 100%;
   height: 100%;
@@ -125,7 +130,7 @@
   font-size: 20px;
 }
 .activities .activities-container .activity-wrap.ski {
-  background-image: url(./img/skill_ski.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/skill_ski.jpg);
   background-position: center;
   background-size: cover;
 }/*# sourceMappingURL=about.css.map */
