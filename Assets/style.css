@@ -348,16 +348,6 @@ section > div {
   padding-right: 100px;
 }
 .contact .contact-inner .contact-form {
-.contact .contact-inner {
-  display: flex;
-  align-items: center;
-}
-.contact .contact-inner .contact-img {
-  width: 50%;
-  text-align: center;
-  padding-right: 100px;
-}
-.contact .contact-inner .contact-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
