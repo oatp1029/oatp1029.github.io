@@ -433,14 +433,14 @@ section {
 
         ::before {
           transition: 0.2s ease-in-out all;
-          content: "";
           display: block;
+          content: "";
           width: 0%;
           height: 2px;
           position: absolute;
           bottom: -1px;
           left: 0;
-          background: #200b2a;
+          background-color: #200b2a;
           border-radius: 1px;
         }
 
