@@ -348,6 +348,16 @@ section > div {
   padding-right: 100px;
 }
 .contact .contact-inner .contact-form {
+.contact .contact-inner {
+  display: flex;
+  align-items: center;
+}
+.contact .contact-inner .contact-img {
+  width: 50%;
+  text-align: center;
+  padding-right: 100px;
+}
+.contact .contact-inner .contact-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -361,14 +371,14 @@ section > div {
 }
 .contact .contact-inner .contact-form > div ::before {
   transition: 0.2s ease-in-out all;
-  content: "";
   display: block;
+  content: "";
   width: 0%;
   height: 2px;
   position: absolute;
   bottom: -1px;
   left: 0;
-  background: #200b2a;
+  background-color: #200b2a;
   border-radius: 1px;
 }
 .contact .contact-inner .contact-form > div:focus-within ::before {
