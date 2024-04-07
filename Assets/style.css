@@ -338,23 +338,57 @@ section > div {
   border: #200b2a 1px solid;
 }
 
-.contact .contact-form {
+.contact .contact-inner {
+  display: flex;
+  align-items: center;
+}
+.contact .contact-inner .contact-img {
+  width: 50%;
+  text-align: center;
+  padding-right: 100px;
+}
+.contact .contact-inner .contact-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 50%;
 }
-.contact .contact-form > div {
+.contact .contact-inner .contact-form > div {
   width: 100%;
-  padding-top: 15px;
+  padding-top: 30px;
+  border-bottom: 1px solid #a1a1a1;
+  position: relative;
 }
-.contact .contact-form input,
-.contact .contact-form textarea {
+.contact .contact-inner .contact-form > div ::before {
+  transition: 0.2s ease-in-out all;
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: #200b2a;
+  border-radius: 1px;
+}
+.contact .contact-inner .contact-form > div:focus-within ::before {
+  width: 100%;
+}
+.contact .contact-inner .contact-form input,
+.contact .contact-inner .contact-form textarea {
   margin-top: 10px;
   width: 100%;
-  padding: 5px 10px;
+  padding: 20px 10px;
+  border: none;
 }
-.contact .contact-form .form-first-name,
-.contact .contact-form .form-last-name {
+.contact .contact-inner .contact-form input:focus-visible,
+.contact .contact-inner .contact-form textarea:focus-visible {
+  outline: none;
+}
+.contact .contact-inner .contact-form .form-first-name,
+.contact .contact-inner .contact-form .form-last-name,
+.contact .contact-inner .contact-form .form-phone,
+.contact .contact-inner .contact-form .form-email {
   width: 49%;
 }
 .contact .contact-btn {
@@ -424,7 +458,54 @@ footer .link-wrap i {
     max-width: 100% !important;
     width: 100% !important;
   }
+  .contact .contact-inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact .contact-inner .contact-img {
+    padding-right: 0;
+    width: 100%;
+  }
+  .contact .contact-inner .contact-form {
+    width: 100%;
+  }
+  .contact .contact-inner .contact-form .form-first-name,
+  .contact .contact-inner .contact-form .form-last-name,
+  .contact .contact-inner .contact-form .form-phone,
+  .contact .contact-inner .contact-form .form-email {
+    width: 100%;
+  }
   footer .menu {
     display: none;
   }
+}
+.contact-header {
+  height: 300px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contact-header .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/main_background.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+.contact-header .contact-header-title {
+  max-width: 1300px;
+  width: 100%;
+}
+.contact-header h2 {
+  padding-top: 150px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px #000000;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

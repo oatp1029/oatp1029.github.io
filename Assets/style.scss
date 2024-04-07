@@ -409,26 +409,66 @@ section {
 }
 
 .contact {
-  .contact-form {
+  .contact-inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
 
-    > div {
-      width: 100%;
-      padding-top: 15px;
+    .contact-img {
+      width: 50%;
+      text-align: center;
+      padding-right: 100px;
     }
 
-    input,
-    textarea {
-      margin-top: 10px;
-      width: 100%;
-      padding: 5px 10px;
-    }
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 50%;
 
-    .form-first-name,
-    .form-last-name {
-      width: 49%;
+      > div {
+        width: 100%;
+        padding-top: 30px;
+        border-bottom: 1px solid #a1a1a1;
+        position: relative;
+
+        ::before {
+          transition: 0.2s ease-in-out all;
+          display: block;
+          content: "";
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          background-color: #200b2a;
+          border-radius: 1px;
+        }
+
+        &:focus-within {
+          ::before {
+            width: 100%;
+          }
+        }
+      }
+
+      input,
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+        padding: 20px 10px;
+        border: none;
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      .form-first-name,
+      .form-last-name,
+      .form-phone,
+      .form-email {
+        width: 49%;
+      }
     }
   }
 
@@ -507,9 +547,65 @@ footer {
     }
   }
 
+  .contact {
+    .contact-inner {
+      flex-direction: column;
+      justify-content: center;
+
+      .contact-img {
+        padding-right: 0;
+        width: 100%;
+      }
+
+      .contact-form {
+        width: 100%;
+        .form-first-name,
+        .form-last-name,
+        .form-phone,
+        .form-email {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   footer {
     .menu {
       display: none;
     }
+  }
+}
+
+.contact-header {
+  height: 300px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/main_background.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+  }
+
+  .contact-header-title {
+    max-width: 1300px;
+    width: 100%;
+  }
+
+  h2 {
+    padding-top: 150px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px #000000;
+    text-align: right;
   }
 }
