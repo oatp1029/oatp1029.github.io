@@ -13,6 +13,16 @@ const fixedHeaderSet = () => {
   }
 };
 
+window.addEventListener("scroll", function () {
+  var top = this.scrollY;
+
+  if (top > 80) {
+    document.querySelector(".fixed-header").classList.add("fixed");
+  } else {
+    document.querySelector(".fixed-header").classList.remove("fixed");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", fixedHeaderSet);
 
 window.onload = function () {
