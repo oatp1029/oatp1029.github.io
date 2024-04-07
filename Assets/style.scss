@@ -37,6 +37,33 @@ a {
 
   &.fixed {
     background-color: #200b2a;
+    .menu {
+      .menu-list {
+        .menu-item {
+          .sub-menu-items {
+            background-color: #200b2a;
+          }
+        }
+      }
+    }
+  }
+  &.mobile {
+    .menu {
+      .menu-list {
+        .menu-item {
+          .sub-menu-items {
+            display: block;
+            position: static;
+            padding: 5px;
+
+            a {
+              font-size: 14px;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .logo {
@@ -55,6 +82,35 @@ a {
         font-size: 20px;
         font-weight: 500;
         list-style: none;
+        position: relative;
+        transition: 0.3s ease-in-out all;
+
+        .sub-menu-items {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding: 30px 20px 10px;
+          background-color: transparent;
+
+          a {
+            display: block;
+            padding: 10px 0;
+            color: #ffffff !important;
+            transition: 0.3s ease-in-out all;
+
+            &:hover {
+              color: #506dee !important;
+            }
+          }
+        }
+
+        &:hover {
+          color: #506dee;
+          .sub-menu-items {
+            display: block;
+          }
+        }
       }
     }
 
@@ -72,7 +128,12 @@ a {
 
         .menu-item {
           padding-bottom: 10px;
+          text-align: center;
         }
+      }
+
+      .mobile-btn {
+        transform: rotate(90deg);
       }
     }
   }

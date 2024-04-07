@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Will Jo - About</title>
+    <title>Will Jo - Portfolio - Video Editing</title>
     <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
-    <link rel="stylesheet" type="text/css" href="./Assets/about.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/video.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +16,6 @@
       src="https://kit.fontawesome.com/2b1c6b1e57.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="background-img"></div>
@@ -58,92 +52,28 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-    <header class="about-header">
+    <script src="./Assets/script.js"></script>
+    <header class="portfolio-p-header">
       <div class="back"></div>
-      <div class="about-header-title">
-        <h2>About</h2>
+      <div class="portfolio-p-header-title">
+        <h2>Portfolio</h2>
+        <h4>Video Editing Projects</h4>
       </div>
     </header>
     <section class="main">
       <div class="main-container">
-        <div class="section-title">
-          <p>Will Jo</p>
+        <div class="video-preview">
+          <video></video>
         </div>
-        <div class="main-inner">
-          <div class="main-about-img img-container">
-            <img src="./Assets/img/profile.jpg" alt="Profile" />
-          </div>
-        </div>
-        <div class="main-information">
-          <p class="main-description">
-            I am a very hard-working grade 11 high-school student who is
-            committed to excellence in all things that I do. I like working in
-            different environments and quickly adapting to new situations. I
-            have excellent time management and organization skills. Further, I
-            have a positive attitude and I’m excited about learning new things
-            and doing new tasks. I’m proud of my resourcefulness when doing
-            difficult tasks because it has helped me problem-solve in a variety
-            of situations.
-          </p>
+        <div class="video-description">
+          <div class="title">Title</div>
+          <div class="subtitle">Subtitle</div>
+          <div class="tools">tools</div>
+          <div class="description">description</div>
         </div>
       </div>
     </section>
 
-    <section class="skills">
-      <div class="skills-container">
-        <div class="section-title">
-          <p>Skills</p>
-        </div>
-        <div class="skills-inner">
-          <div class="skills-wrap">
-            <div class="single-skill">
-              <div class="single-skill-title">HTML/CSS/JS</div>
-            </div>
-          </div>
-          <div class="skills-wrap">
-            <div class="single-skill">
-              <div class="single-skill-title">JAVA</div>
-            </div>
-          </div>
-          <div class="skills-wrap">
-            <div class="single-skill">
-              <div class="single-skill-title">PREMIERE PRO</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="activities">
-      <div class="swiper">
-        <div class="swiper-wrapper activities-container">
-          <div class="swiper-slide activity-wrap ski">
-            <div class="activity-title">
-              LIT Part Time Volunteer Ski Instructor Assistance
-            </div>
-            <div class="activity-description">
-              Grouse Mountain · Permanent Part-timeGrouse Mountain · Permanent
-              Part-time<br />
-              Dec 2023 - April 2024<br />
-              North Vancouver, British Columbia, Canada
-            </div>
-            <div class="activity-text">description add</div>
-          </div>
-          <div class="swiper-slide activity-wrap ski">
-            <div class="activity-title">City Park Stewards</div>
-            <div class="activity-description">
-              City of North Vancouvere<br />
-              Volunteer<br />
-              North Vancouver, British Columbia, Canada
-            </div>
-            <div class="activity-text">
-              Cutting all invasive plants to make the park cleaner<br />
-              Planting various plants in designated areas throughout the park<br />
-              Currently volunteered +10 hours
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="contact">
       <div class="contact-container">
         <div class="section-title center">
@@ -227,19 +157,5 @@
         </a>
       </div>
     </footer>
-    <script src="./Assets/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const swiper = new Swiper(".swiper", {
-          // Optional parameters
-          direction: "horizontal",
-          loop: true,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-        });
-      });
-    </script>
   </body>
 </html>
