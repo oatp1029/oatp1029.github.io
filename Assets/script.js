@@ -30,3 +30,14 @@ window.onload = function () {
 };
 
 window.addEventListener("resize", fixedHeaderSet);
+
+const handleResponse = (response) => {
+  console.log("blogger response", response);
+  var post_number = Object.keys(response.items).length; //number of posts
+  for (i = 0; i < post_number; i++) {
+    document
+      .querySelector("#blog-container")
+      .append('<div id="post' + (i + 1) + '" class="post"><p></p></div>');
+    document.querySelector(".post p").html(response.items[i].title);
+  }
+};
