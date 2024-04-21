@@ -31,13 +31,23 @@ window.onload = function () {
 
 window.addEventListener("resize", fixedHeaderSet);
 
-const handleResponse = (response) => {
+const handleResponse = async (response) => {
   console.log("blogger response", response);
   var post_number = Object.keys(response.items).length; //number of posts
   for (i = 0; i < post_number; i++) {
-    document
-      .querySelector("#blog-container")
-      .append('<div id="post' + (i + 1) + '" class="post"><p></p></div>');
-    document.querySelector(".post p").html(response.items[i].title);
+    await document.querySelector(".blog-inner").append(`<div class="postcard">
+      <p class="blog-title">${response.items(i).title}</p>
+      <p class="blog-content">${response.items(i).content}</p>
+      <p class="published">${response.items(i).published}</p>
+      <a class="blog-link-btn" href="${response.items(i).url}"> View </a>
+    </div>`);
   }
+  /*
+  const cards = document.querySelectorAll(".postcard");
+  cards.forEach((e) => {
+    e.html();
+    
+
+  })
+  */
 };

@@ -532,6 +532,58 @@ footer {
   }
 }
 
+.blog {
+  .blog-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .postcard {
+      border: #333333 1px solid;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      width: 30%;
+      min-width: 200px;
+      overflow: hidden;
+      padding: 15px;
+
+      .blog-title {
+        font-weight: 600;
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 10px;
+      }
+
+      .blog-content {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 10px;
+      }
+
+      .published {
+        font-size: 0.75em;
+        font-weight: 500;
+        color: #a1a1a1;
+        padding-bottom: 20px;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        border: 1px solid #200b2a;
+        transition: 0.3s ease-in-out all;
+        padding: 10px 30px;
+
+        &:hover {
+          background-color: #200b2a;
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .main-about-content {
     flex-direction: column;
