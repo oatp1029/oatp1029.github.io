@@ -36,10 +36,10 @@ const handleResponse = async (response) => {
   var post_number = Object.keys(response.items).length; //number of posts
   for (i = 0; i < post_number; i++) {
     await document.querySelector(".blog-inner").append(`<div class="postcard">
-      <p class="blog-title">${response.items(i).title}</p>
-      <p class="blog-content">${response.items(i).content}</p>
-      <p class="published">${response.items(i).published}</p>
-      <a class="blog-link-btn" href="${response.items(i).url}"> View </a>
+      <p class="blog-title">${response.items[i].title}</p>
+      <p class="blog-content">${response.items[i].content}</p>
+      <p class="published">${response.items[i].published}</p>
+      <a class="blog-link-btn" href="${response.items[i].url}"> View </a>
     </div>`);
   }
   /*
