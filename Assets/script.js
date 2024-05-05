@@ -31,23 +31,41 @@ window.onload = function () {
 
 window.addEventListener("resize", fixedHeaderSet);
 
-const handleResponse = async (response) => {
+const handleResponse = (response) => {
   console.log("blogger response", response);
   var post_number = Object.keys(response.items).length; //number of posts
-  for (i = 0; i < post_number; i++) {
-    await document.querySelector(".blog-inner").append(`<div class="postcard">
-      <p class="blog-title">${response.items[i].title}</p>
-      <p class="blog-content">${response.items[i].content}</p>
-      <p class="published">${response.items[i].published}</p>
-      <a class="blog-link-btn" href="${response.items[i].url}"> View </a>
-    </div>`);
-  }
-  /*
-  const cards = document.querySelectorAll(".postcard");
-  cards.forEach((e) => {
-    e.html();
-    
+  var post_content = "";
 
-  })
-  */
+  post_number = post_number > 6 ? 6 : post_number;
+
+  for (i = 0; i < post_number; i++) {
+    post_content += `<div class="postcard">
+      <p class="blog-title">${response.items[i].title}</p>
+      <p class="blog-content"></p>
+      <p class="published">${response.items[i].published}</p>
+      <a class="blog-link-btn" href="${response.items[i].url}" target="_black"> View </a>
+    </div>`;
+  }
+
+  document.querySelector(".blog-inner").innerHTML = post_content;
+
+  document.querySelectorAll(".blog-content").forEach((e, i) => {
+    e.innerHTML = `<div><div class="blog-filter"></div>${response.items[i].content}</div>`;
+  });
+
+  document.getElementById("video-p-btn").addEventListener("click", () => {
+    window.open("./portfolio_video.html");
+  });
+
+  document.getElementById("prog-p-btn").addEventListener("click", () => {
+    window.open("./portfolio_programming.html");
+  });
+
+  document.getElementById("main-skill-btn").addEventListener("click", () => {
+    window.open("./about.html#skills");
+  });
+
+  document.getElementById("blog-btn").addEventListener("click", () => {
+    window.open("https://willjo1029.blogspot.com", "_blank");
+  });
 };
