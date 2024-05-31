@@ -16,6 +16,15 @@
       src="https://kit.fontawesome.com/2b1c6b1e57.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/2b1c6b1e57.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="background-img"></div>
@@ -36,7 +45,9 @@
               <a href="portfolio_programming.html">Programming</a>
             </div>
           </li>
-          <a href="https://willjo1029.blogspot.com" target="_blank">BLOG</a>
+          <li class="menu-item">
+            <a href="https://willjo1029.blogspot.com" target="_blank">BLOG</a>
+          </li>
           <li class="menu-item"><a href="contact.html">CONTACT</a></li>
         </ul>
       </div>
@@ -62,18 +73,75 @@
     </header>
     <section class="main">
       <div class="main-container">
-        <div class="video-preview">
-          <video></video>
+        <div class="video-line"></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="video-container">
+                <div class="video-preview">
+                  <div class="video-wrap">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/gcNwMMFENlY?si=WIHPptAVLy78Mvit"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="video-description">
+                <div class="video-description-wrap">
+                  <div class="title">Antigone By Sophocles Play Summary</div>
+                  <div class="subtitle">20XX.XX.XX</div>
+                  <div class="tools">Adobe Premiere Pro</div>
+                  <div class="description">
+                    This is a English project that I worked on. I tried to
+                    summarize the play with the Minecraft. I used Premier Pro
+                    which is a editing software to add lots of special effects.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-container">
+                <div class="video-preview">
+                  <div class="video-wrap">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/gcNwMMFENlY?si=WIHPptAVLy78Mvit"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="video-description">
+                <div class="video-description-wrap">
+                  <div class="title">Antigone By Sophocles Play Summary</div>
+                  <div class="subtitle">20XX.XX.XX</div>
+                  <div class="tools">Adobe Premiere Pro</div>
+                  <div class="description">
+                    This is a English project that I worked on. I tried to
+                    summarize the play with the Minecraft. I used Premier Pro
+                    which is a editing software to add lots of special effects.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="video-description">
-          <div class="title">Title</div>
-          <div class="subtitle">Subtitle</div>
-          <div class="tools">tools</div>
-          <div class="description">description</div>
-        </div>
+        <div class="video-line"></div>
       </div>
     </section>
-
     <section class="contact">
       <div class="contact-container">
         <div class="section-title center">
@@ -154,5 +222,7 @@
         </a>
       </div>
     </footer>
+    <script src="./Assets/script.js"></script>
+    <script src="./Assets/video.js"></script>
   </body>
 </html>
