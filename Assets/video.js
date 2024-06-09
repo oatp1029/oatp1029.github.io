@@ -1,4 +1,4 @@
-dim = 7;
+dim = 9;
 width = 10;
 height = 10;
 
