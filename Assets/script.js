@@ -61,8 +61,13 @@ const handleResponse = (response) => {
   document.getElementById("blog-btn").addEventListener("click", () => {
     window.open("https://willjo1029.blogspot.com", "_blank");
   });
-
   document.getElementById("main-skill-btn").addEventListener("click", () => {
     window.open("./about.html#skills");
+  });
+  document.getElementById("about-btn").addEventListener("click", () => {
+    window.open("./about.html");
+  });
+  document.getElementById("activity-btn").addEventListener("click", () => {
+    window.open("./about.html#activities");
   });
 };

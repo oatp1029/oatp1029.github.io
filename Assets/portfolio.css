@@ -33,6 +33,48 @@
   padding-top: 5px;
 }
 
+.single-pf {
+  padding: 50px 0;
+}
+.single-pf .section-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.single-pf .section-subtitle .view-btn {
+  font-size: 15px;
+  color: #200b2a;
+  display: inline-flex;
+  width: 200px;
+  transition: 0.3s ease-in-out all;
+  text-align: right;
+  justify-content: flex-end;
+}
+.single-pf .section-subtitle .view-btn div {
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
+}
+.single-pf .section-subtitle .view-btn:hover div {
+  width: 10px;
+}
+.single-pf .img-container {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #200b2a;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.single-pf .pf-discription {
+  padding-bottom: 20px;
+}
+.single-pf ul li {
+  margin-left: 20px;
+}
+
 #whale-translator {
   width: 100%;
   max-width: 1300px;

@@ -39,6 +39,58 @@ $theme-color: #200b2a;
   }
 }
 
+.single-pf {
+  padding: 50px 0;
+
+  .section-subtitle {
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .view-btn {
+      font-size: 15px;
+      color: #200b2a;
+      display: inline-flex;
+      width: 200px;
+      transition: 0.3s ease-in-out all;
+      text-align: right;
+      justify-content: flex-end;
+
+      div {
+        width: 0;
+        overflow: hidden;
+        transition: 0.3s ease-in-out all;
+      }
+      &:hover {
+        div {
+          width: 10px;
+        }
+      }
+    }
+  }
+
+  .img-container {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #200b2a;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .pf-discription {
+    padding-bottom: 20px;
+  }
+
+  ul {
+    li {
+      margin-left: 20px;
+    }
+  }
+}
+
 #whale-translator {
   width: 100%;
   max-width: 1300px;
