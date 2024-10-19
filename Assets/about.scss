@@ -131,6 +131,7 @@ $theme-color: #200b2a;
       align-items: center;
       flex-direction: column;
       text-align: center;
+      background-color: aqua;
 
       .activity-title {
         font-size: 25px;
@@ -150,11 +151,192 @@ $theme-color: #200b2a;
         font-size: 20px;
       }
 
+      .modal-btn {
+        padding: 10px 30px;
+        border: 1px solid #ffffff;
+        color: #fff;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out all;
+
+        &:hover {
+          background-color: #fff;
+          color: #200b2a;
+        }
+      }
+
       &.ski {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
           url(./img/skill_ski.jpg);
         background-position: center;
         background-size: cover;
+      }
+      &.first {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/first_th.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.wvyb {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/wvyb_th.jpg);
+        background-position: top;
+        background-size: cover;
+      }
+      &.city {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/city.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.app {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/app.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.apc {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/apc.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.coding {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/coding.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.stash {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/stash_th.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.agrc {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/argc_th.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      &.golf {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(./img/golf_th.jpg);
+        background-position: top;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.nonvisible {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#modal {
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  max-height: 0;
+  transform: translate(-50%, -50%);
+  top: 50vh;
+  left: 50vw;
+  transition: 0.3s ease-in-out all;
+  overflow: hidden;
+
+  &.open {
+    width: 100vw;
+    max-height: 100vh;
+    z-index: 99999999;
+
+    .modal-close-layout {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-container {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      max-width: 1200px;
+      max-height: 90vh;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+
+      .modal-close-btn {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        color: #200b2a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1em;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        cursor: pointer;
+      }
+
+      .modal-content {
+        overflow-y: scroll;
+        height: 100%;
+        padding: 20px;
+
+        .modal-title {
+          padding-bottom: 20px;
+        }
+
+        .modal-period {
+          padding-bottom: 20px;
+          font-style: italic;
+        }
+
+        .modal-img-outer {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding-bottom: 30px;
+
+          .modal-img-container {
+            width: calc(50% - 10px);
+
+            .modal-img {
+              max-width: 100%;
+            }
+          }
+        }
+
+        &::-webkit-scrollbar {
+          width: 5px;
+          border-radius: 3px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 3px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 3px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+          border-radius: 3px;
+        }
       }
     }
   }
